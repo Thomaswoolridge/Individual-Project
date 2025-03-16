@@ -31,6 +31,10 @@ if userAnswer == "y":
 else:
     print("I'm glad you like the name " + characterName + "!")
 
+years_exp = random.randint(10,30)
+
+print("You have been a world famous explorer for", years_exp, "years!")
+
 moneyOffer = 10000
 print("You've been hired by a mysterious group of billionaires\nThey want you to find the ancient treasure of the jungle\nThey are willing to pay", moneyOffer, "\nWill you accept the challenge? y or n?")
 
@@ -69,8 +73,8 @@ if nextStep == "cave":
       print("The torch illuminates the inside of the cave.\nYou see something shiny deep inside but there is a cave lake seperating you from it.\nWill you swim across the water or climb across the wall? swim or climb")
       caveTrip = input("> ")
       if caveTrip == "swim":
-          print("You got a little wet but made it across.\nCongratulations! You got the treasure!\nThe billionaires not only give you $" + str(moneyOffer) + ", they also let you keep the treasure")
-          print("You fly back home!\nThanks for playing!")
+          print("You got a little wet but made it across.\nCongratulations! You got the treasure!\nThe billionaires not only give you $" + str(moneyOffer) + ", they also let you keep the treasure\nYou fly back home!\nThanks for playing!")
+          #print("You fly back home!\nThanks for playing!")
           plane()
       elif caveTrip == "climb":
           print("You aren't as strong as you used to be and lost your grip!\nOh no! You fell in the water and don't have the energy to stay afloat." + characterName + ", you drowned. Game Over.")
@@ -85,8 +89,7 @@ elif nextStep == "temple":
     hardhatChoice = input("> ")
     if hardhatChoice == "y":
         moneyOffer = moneyOffer * 250
-        print("You made a smart choice!\nDebris falls from the ceiling and hits your helmet.\nYou are just fine!\nYou have stumbled across the room with the treasure.\nCongratulations, you win!\nThe billionaires have paid you $" + str(moneyOffer) + "!")
-        print("You take a ship back home.\nYou made it safely!")
+        print("You made a smart choice!\nDebris falls from the ceiling and hits your helmet.\nYou are just fine!\nYou have stumbled across the room with the treasure.\nCongratulations, you win!\nThe billionaires have paid you $" + str(moneyOffer) + "!\nYou take a ship back home.\nYou made it safely!")
         boat()
         print("Bonus Round!\nTake a chance to win more or lose it all!\nWill you take the chance? y or n?")
         bonusChoice = input("> ")
