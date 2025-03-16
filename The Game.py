@@ -1,4 +1,5 @@
 import random
+#function that creates ascii art of a boat to be resued
 def boat():
     print(r"""     (`-,-,""")
     print(r"""     ('(_,( ) """)      
@@ -7,7 +8,7 @@ def boat():
     print(r""" _|___________|__ """)  
     print(r"""|o o o o o o o o/  """)  
     print(r"""~'`~'`~'`~'`~'`~'`~  """) 
-
+#function that creates ascii art of a plane to be resued
 def plane():
     print(r"""        _ """)
     print(r"""      -=\`\ """)      
@@ -46,7 +47,7 @@ while True:
         break
     else:
         moneyOffer = moneyOffer +10000
-        print("Are you sure you won't accept the challenge?\nThey will pay "+ str(moneyOffer) +"!")
+        print("Are you sure you won't accept the challenge?\nThey will pay "+ str(moneyOffer) +"!") #coverted moneyOffer integer to a string to make the spacing work for me.
 
 print("The journey is long and treacherous!\nWill you take your trip to the jungle by boat or by plane?")
 validChoice = "boat", "plane"
@@ -61,7 +62,7 @@ while True:
         plane()
         break
     else:
-        print("That is an invalid choice please try again")
+        print("That is an invalid choice please try again")# struggled with this loop for a good while
 
 print("You've finally made it to the jungle!\nYou see a cave ahead but not far beyond you see temple ruins.\nWill you enter the cave or the temple")
 
@@ -74,7 +75,6 @@ if nextStep == "cave":
       caveTrip = input("> ")
       if caveTrip == "swim":
           print("You got a little wet but made it across.\nCongratulations! You got the treasure!\nThe billionaires not only give you $" + str(moneyOffer) + ", they also let you keep the treasure\nYou fly back home!\nThanks for playing!")
-          #print("You fly back home!\nThanks for playing!")
           plane()
       elif caveTrip == "climb":
           print("You aren't as strong as you used to be and lost your grip!\nOh no! You fell in the water and don't have the energy to stay afloat." + characterName + ", you drowned. Game Over.")
@@ -101,7 +101,7 @@ elif nextStep == "temple":
 
 
     elif hardhatChoice =="n":
-        print("You just took a huge risk and it didn't pay off.\n A 50lb stone fell from the ceiling and hit you in the head.\nYour head is now a pancake.\nGame Over.")
+        print("You just took a huge risk and it didn't pay off.\nA 50lb stone fell from the ceiling and hit you in the head.\nYour head is now a pancake.\nGame Over.")
     else:
         print("You decided not to risk your life and go home.\nThe billionaires aren't happy but you give them their money back.\n This is the happy ending game over.")
 else:
